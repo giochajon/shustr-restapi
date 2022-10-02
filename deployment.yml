@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: shustr-restapi
+  name: shustr-restapi
+spec:
+  replicas: 5
+  selector: 
+    matchLabels:
+      app: shustr-restapi
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: shustr-restapi
+    spec:
+      containers:
+      - image: docker.io/giochajon/shustr-restapi
+        name: python-api
+        imagePullPolicy: Always
+        resources: {}
+        ports:
+          - containerPort: 5000
+status: {}

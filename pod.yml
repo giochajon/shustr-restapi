@@ -4,7 +4,7 @@ metadata:
   name: pythonapi
 spec:
   containers:
-    - image: docker.io/igiochajon/shustr-restapi
+    - image: docker.io/giochajon/shustr-restapi
       name: pythonapi
       imagePullPolicy: Always
       resources: {}
