@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: pythonapi
+spec:
+  containers:
+    - image: docker.io/igiochajon/shustr-restapi
+      name: pythonapi
+      imagePullPolicy: Always
+      resources: {}
+      ports:
+        - containerPort: 5000
